@@ -14,7 +14,7 @@ while True:
 6. Listar Catálogo Completo con IVA Incluido
 7. Finalizar Programa
 ========================================================""")
-        opcion=int(input("Seleccione : 🚗"))
+        opcion=int(input("Seleccione : 🚗 "))
 
         match opcion:
             case 1: 
@@ -31,7 +31,7 @@ while True:
             case 4: pass
             case 4: pass
             case 5: pass
-            case 6: pass
+            case 6: listaconiva()
             case 7: break
             case _: print("No valido")
     except Exception as e:  
