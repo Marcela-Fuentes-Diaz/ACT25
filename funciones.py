@@ -24,7 +24,7 @@ def agregar(patente,tipo,anio,precio):
         print("No se puede repetir la patente")
         return
     #validar tipo
-    elif tipo.lower() not in ("sedan","suv","camionetqa"):
+    elif tipo.lower() not in ("sedan","suv","camioneta"):
         print("Tipo no valido")
         return
     elif anio<2015 or anio>2026:
@@ -37,3 +37,11 @@ def agregar(patente,tipo,anio,precio):
     auto={"patente":patente,"tipo":tipo,"anio":anio,"precio":precio}
     vehiculos.append(auto)    
     print("Vehiculo Registrado")#alt+z para poder escribir en la misma linea pero hacia debajo
+    #Patente existente 
+def mostrar(patente):
+    posicion=buscar(patente)
+    if posicion>=0:
+        print(f"Patente encontrada : {vehiculos[posicion]}")
+    else: 
+        print("Patente no encontrada")
+
